@@ -1,1 +1,100 @@
 
+These 3 matters the most in an app
+
+1. Scalability
+2. Reliability
+3. Maintainability
+
+Throughput
+Load parameters
+fan-out
+
+
+Once you have described the load on your system, you can investigate what happens when load increases
+
+You can either increase system resources or add VMs
+
+batch processing using hadoop
+
+Latency and response time
+Latency and response time are often used synonymously, but they
+are not the same. The response time is what the client sees: besides
+the actual time to process the request (the service time), it includes
+network delays and queueing delays. Latency is the duration that a
+request is waiting to be handled—during which it is latent, awaiting
+service [17].
+
+service level objectives (SLOs) and service level agreements (SLAs),
+
+The naïve implementation is to keep a list of response times for all requests within the
+time window and to sort that list every minute. If that is too inefficient for you, there
+are algorithms that can calculate a good approximation of percentiles at minimal
+CPU and memory cost, such as forward decay [25], t-digest [26], or HdrHistogram
+[27]. Beware that averaging percentiles, e.g., to reduce the time resolution or to combine
+data from several machines, is mathematically meaningless—the right way of
+aggregating response time data is to add the histograms [28].
+
+
+People often talk of a dichotomy between scaling up (vertical scaling, moving to a
+more powerful machine) and scaling out (horizontal scaling, distributing the load
+across multiple smaller machines). Distributing load across multiple machines is also
+known as a shared-nothing architecture. A system that can run on a single machine is
+often simpler, but high-end machines can become very expensive, so very intensive
+workloads often can’t avoid scaling out. In
+
+
+Operability
+Make it easy for operations teams to keep the system running smoothly.
+Simplicity
+Make it easy for new engineers to understand the system, by removing as much
+complexity as possible from the system. (Note this is not the same as simplicity
+of the user interface.)
+Evolvability
+Make it easy for engineers to make changes to the system in the future, adapting
+it for unanticipated use cases as requirements change. Also known as extensibility,
+modifiability, or plasticity.
+As previously with reliability and scalability, there are no easy solutions for achieving
+these goals. Rather, we will
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
